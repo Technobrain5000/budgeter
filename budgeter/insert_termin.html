@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+    <head>
+        <title>Budget Rechner</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="formula">
+            <h1>Meine Agenda</h1>
+            <form action="submitter_agenda.php" method="POST">
+                <table>
+                    <tr>
+                        <td class="first">
+                            <label>Titel</label>
+                        </td>
+                        <td>
+                            <input type="text" name="title">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Beschreibung</label>
+                        </td>
+                        <td>
+                            <input type="text" name="besch">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Zeitpunkt</label>
+                        </td>
+                        <td>
+                            <input type="datetime-local" name="time">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Ort</label>
+                        </td>
+                        <td>
+                            <input type="text" name="place">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Farbe</label>
+                        </td>
+                        <td>
+                            <select name="color">
+                                <option value="black">Schwarz</option>
+                                <option value="silver">Silber</option>
+                                <option value="gray">Grau</option>
+                                <option value="white">Weiss</option>
+                                <option value="maroon">Dunkelrot</option>
+                                <option value="red">Rot</option>
+                                <option value="purple">Violett</option>
+                                <option value="fuchsia">Pink</option>
+                                <option value="green">Grün</option>
+                                <option value="lime">Hellgrün</option>
+                                <option value="olive">Olive</option>
+                                <option value="yellow">Gelb</option>
+                                <option value="navy">Dunkelblau</option>
+                                <option value="blue">Blau</option>
+                                <option value="teal">Cyan</option>
+                                <option value="aqua">Türkis</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Eintragen">
+            </form>
+        </div>
+    </body>
+</html>

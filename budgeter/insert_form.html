@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+    <head>
+        <title>Budget Rechner</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="formula">
+            <h1>Mein Budget Rechner</h1>
+            <form action="submitter.php" method="POST">
+                <table>
+                    <tr>
+                        <td class="first">
+                            <label>Art</label>
+                        </td>
+                        <td>
+                            <input type="radio" value="Einnahme" id="ei" name="ta">
+                            <label for="ei" class="radio_label">Einnahme</label>
+                            <input type="radio" value="Ausgabe" id="au" name="ta">
+                            <label for="au" class="radio_label">Ausgabe</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Kategorie </label>
+                        </td>
+                        <td>
+                            <select name="kat">
+                                <option value="none">Auswählen...</option>
+                                <option value="Lebensmittel">Lebensmittel</option>
+                                <option value="Lohn">Lohn</option>
+                                <option value="EO">EO</option>
+                                <optgroup label="IT">
+                                    <option value="PC Komponenten">PC Komponenten</option>
+                                    <option value="PC Zubehör">PC Zubehör</option>
+                                    <option value="Peripherie">Peripherie</option>
+                                    <option value="Software">Software</option>
+                                    <option value="Reparaturen">Reparaturen</option>
+                                    <option value="Hosting">Hosting</option>
+                                    <option value="Handyabo">Handyabo</option>
+                                </optgroup>
+                                <optgroup label="Unterhaltung">
+                                    <option value="Games">Games</option>
+                                    <option value="Streaming">Streaming</option>
+                                    <option value="Ferien">Ferien</option>
+                                    <option value="Ausflug">Ausflug</option>
+                                    <option value="Social Media">Social Media</option>
+                                    <option value="Konzert">Konzert</option>
+                                </optgroup>
+                                <optgroup label="Sonstiges">
+                                    <option value="Versandkosten">Versandkosten</option>
+                                    <option value="Privatpersonen">Privatpersonen</option>
+                                    <option value="Sonstiges">Sonstiges</option>
+                                </optgroup>
+                                </select>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Gekauft bei</label>
+                        </td>
+                        <td>
+                            <select name="bei">
+                                <option value="none">Auswählen...</option>
+                                <option value="Amazon">Amazon</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Blizzard">Blizzard</option>
+                                <option value="Brack">Brack</option>
+                                <option value="Burger King">Burger King</option>
+                                <option value="CableMod">CableMod</option>
+                                <option value="Coop">Coop</option>
+                                <option value="Crunchyroll">Crunchyroll</option>
+                                <option value="Cleverbridge">Cleverbridge</option>
+                                <option value="Deezer">Deezer</option>
+                                <option value="Digistore24">Digistore24</option>
+                                <option value="Digitec">Digitec</option>
+                                <option value="Ex Libris">Ex Libris</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Fiverr">Fiverr</option>
+                                <option value="Google">Google</option>
+                                <option value="Instant Gaming">Instant Gaming</option>
+                                <option value="LevlUp">LevlUp</option>
+                                <option value="Lovoo">Lovoo</option>
+                                <option value="McDonalds">McDonalds</option>
+                                <option value="Microsoft">Microsoft</option>
+                                <option value="Migros">Migros</option>
+                                <option value="Netflix">Netflix</option>
+                                <option value="Oculus">Oculus</option>
+                                <option value="OrellFüssli">OrellFüssli</option>
+                                <option value="Patreon">Patreon</option>
+                                <option value="Restaurant">Restaurant</option>
+                                <option value="Runtime">Runtime</option>
+                                <option value="Steam">Steam</option>
+                                <option value="Tinder">Tinder</option>
+                                <option value="Twitch">Twitch</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="Wargaming">Wargaming</option>
+                                <option value="Yallo">Yallo</option>
+                                <option value="Youtube">Youtube</option>
+                                <option value="Mengis Druck & Verlag AG">Mengis Druck & Verlag AG</option>
+                                <option value="AGRAPI Ausgleichskasse">AGRAPI Ausgleichskasse</option>
+                                <option value="Truppenrechnungswesen">Truppenrechnungswesen</option>
+                                <option value="Zins">Zins</option>
+                                <option value="AMO">AMO</option>
+                                <option value="MyCasino">MyCasino</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Beschreibung</label>
+                        </td>
+                        <td>
+                            <input type="text" name="besch" placeholder="Beschreibung hinzufügen...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Preismodell</label>
+                        </td>
+                        <td>
+                            <input type="radio" value="Einmalig" id="em" name="pm">
+                            <label for="em" class="radio_label">Einmalig</label>
+                            <input type="radio" value="Monatlich" id="mo" name="pm">
+                            <label for="mo" class="radio_label">Monatlich</label>
+                            <input type="radio" value="Jährlich" id="ye" name="pm">
+                            <label for="ye" class="radio_label">Jährlich</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Bezahlt mit</label>
+                        </td>
+                        <td>
+                            <select name="bezopt">
+                                <option value="none">Auswählen...</option>
+                                <option value="PayPal">PayPal</option>
+                                <option value="Kreditkarte">Kreditkarte</option>
+                                <option value="Debitkarte">Debitkarte</option>
+                                <option value="Banküberweisung/Rechnung">Banküberweisung/Rechnung</option>
+                                <option value="Sofort Banking">Sofort Banking</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Preis </label>
+                        </td>
+                        <td>
+                            <input type="number" value="pr" name="pr" step=".01">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Gekauft am </label>
+                        </td>
+                        <td>
+                            <input type="datetime-local" value="da" name="dat" step="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Nächste Zahlung am</label>
+                        </td>
+                        <td>
+                            <input type="date" value="nx" name="nxt">
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Absenden">
+            </form>
+        </div>
+    </body>
+</html>

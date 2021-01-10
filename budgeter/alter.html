@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+    <head>
+        <title>Budget Rechner</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="formula">
+            <form action="submitter_alter.php" method="POST">
+                <table>
+                    <tr>
+                        <td class="first">
+                            <label>ID</label>
+                        </td>
+                        <td>
+                            <input type="number" name="id">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Spalte</label>
+                        </td>
+                        <td>
+                            <select name="spalte">
+                                <option value="Transaktionsart">Transaktionsart</option>
+                                <option value="Kategorie">Kategorie</option>
+                                <option value="Verkaeufer">Verkaeufer</option>
+                                <option value="Beschreibung">Beschreibung</option>
+                                <option value="Preismodell">Preismodell</option>
+                                <option value="Bezahloption">Bezahloption</option>
+                                <option value="Preis">Preis</option>
+                                <option value="Kaufdatum">Kaufdatum</option>
+                                <option value="Faelligkeitsdatum">Faelligkeitsdatum</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first">
+                            <label>Änderung</label>
+                        </td>
+                        <td>
+                            <input type="text" name="alter">
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Ändern">
+            </form>
+        </div>
+    </body>
+</html>
