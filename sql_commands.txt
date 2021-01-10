@@ -1,0 +1,7 @@
+MySQL Datenbank und Tabellen erstellen:
+
+1. mysql -u root -p
+2. CREATE DATABASE budgeting;
+3. USE budgeting;
+4. CREATE TABLE transactions (ID INT(5) NOT NULL UNIQUE AUTO_INCREMENT, Transaktionsart VARCHAR(10) NOT NULL, Kategorie VARCHAR(50) NOT NULL, Verkaeufer VARCHAR(100), Beschreibung VARCHAR(200) NOT NULL, Preismodell VARCHAR(50) NOT NULL, Bezahloption VARCHAR(50) NOT NULL, Preis DECIMAL(7,2) NOT NULL, Kaufdatum DATETIME NOT NULL, Faelligkeitsdatum DATE);
+5. CREATE TABLE agenda (Titel VARCHAR(50) NOT NULL, Beschreibung VARCHAR(200) NOT NULL, Zeitpunkt DATETIME NOT NULL, Ort VARCHAR(100) NOT NULL, Color VARCHAR(25) NOT NULL);
